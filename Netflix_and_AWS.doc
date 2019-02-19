@@ -1,0 +1,21 @@
+Netflix: What Happens When You Press Play?
+web  http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html
+kindle book https://www.amazon.com/Netflix-What-Happens-When-Press-ebook/dp/B079ZKT9G8/
+
+
+Netflix Open Connect CDN overview : https://openconnect.netflix.com/Open-Connect-Overview.pdf
+
+The following diagram illustrates how the playback process works:
+1. OCA’s periodically communicate health, routability, and content availability to the
+cache control service.
+2. A user on a client device requests playback of a title from the Netflix application.
+3. The playback application services check user authorization and licensing, then
+determine which specific streaming assets are required to handle the playback
+request ­  taking individual client characteristics and current network conditions
+into account.
+4. The steering service uses the information stored by the cache control service to
+pick OCAs that the requested video bits should be streamed from, generates
+URLs for these OCAs, and hands the URLs over to the playback application
+services.
+5. The playback application services hand over URLs of the appropriate OCAs to
+the client device, and video streaming starts.
